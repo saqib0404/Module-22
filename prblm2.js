@@ -1,10 +1,11 @@
-function checkPrimeNumber (x){
-    if (x > 1 && (x % x == 1 && x % x == x)){
-        return "It is a Prime Number"
+function findPrimeNumber (x){
+    let isPrime = true;
+    for (let i = 2; i < x; i++) {
+        if (x % i == 0) {
+            isPrime = false;
+            break;
+        }
     }
-    else{
-        return "Not a Prime Number";
-    }
+    return isPrime;
 }
-const x = 1;
-console.log(checkPrimeNumber(15));
+console.log(findPrimeNumber(2));

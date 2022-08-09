@@ -1,6 +1,9 @@
 function findPrimeNumber (x){
+    if (x < 2){
+        return false;
+    }
     let isPrime = true;
-    for (let i = 2; i < x; i++) {
+    for (let i = 2; i < x;i++) {
         if (x % i == 0) {
             isPrime = false;
             break;
@@ -8,4 +11,4 @@ function findPrimeNumber (x){
     }
     return isPrime;
 }
-console.log(findPrimeNumber(2));
+console.log(findPrimeNumber(7));
